@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body onload="onLoad();">
+    <!-- Wrap the div with <grammarly-editor-plugin> to add Grammarly suggestions -->
+    <grammarly-editor-plugin config.autocomplete="on" config.documentDialect="british">
+        <div contenteditable="true" id="tiny-div" class="tiny">
+            <h3>The basics</h3>
+            <p>
+                Mispellings and grammatical errors can effect your credibility. The
+                same goes for misused commas, and other types of punctuation . Not
+                only will Grammarly underline these issues in red, it will also showed
+                you how to correctly write the sentence.
+            </p>
+        </div>
+    </grammarly-editor-plugin>
+
+
+    <script src="https://unpkg.com/@grammarly/editor-sdk@2.3.9?clientId=client_9m1fYK3MPQxwKsib5CxtpB"></script>
+    <script src="./assets/js/tinymce.min.js"></script>
+    <script type="text/javascript">
+        // Initialize TinyMCE
+        tinymce.init({
+            selector: ".tiny"
+        });
+    </script>
+    <!-- <script>
+        function onLoad() {
+            var editorContainer = document.getElementById("editorContainer");
+            var editor = new Grammarly.Editor(editorContainer, {
+                type: 'tinymce'
+            });
+
+            tinymce.init({
+                selector: '#tinymceEditor',
+                setup: function (editor) {
+                    editor.on('init', function (e) {
+                        editor.grammarly = editorContainer.firstChild.grammarly;
+                    });
+                }
+            });
+        }
+    </script> -->
+</body>
+
+</html>
